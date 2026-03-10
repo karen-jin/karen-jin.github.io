@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>White Mountains</title>
+
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Viewport settings for mobile responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+    /* Reset box-sizing for all elements to include padding+border in width calculations */
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        color: #878787; /* text color */
+        margin: 0; /* remove default margin */
+        font-family: sans-serif; /* simple readable font */
+        text-align: center; /* center text by default */
+    }
+
+    nav {
+        background: #4DA6FF; /* sky blue background */
+        padding: 1rem; /* inner spacing */
+        text-align: left; /* align nav links to the left */
+    }
+
+    /* <a> links within the navigation */
+    nav a {
+        color: #FFFFFF; /* white text */
+        text-decoration: none; /* remove underline */
+        font-size: 1rem;
+        margin: 0 1.5rem; 
+        font-weight: bold; /* bold links */
+    }
+
+    /* Mobile-friendly navigation - Stack links vertically on small screens */
+        @media (max-width: 600px) {
+        nav {
+            text-align: center;
+            padding: 0.75rem;
+        }
+    
+        nav a {
+            display: block; /* stack vertically */
+            margin: 0.5rem 0; /* vertical spacing */
+            padding: 0.75rem; /* make links easier to tap */
+        }
+    }
+
+    h1 {
+        font-size: clamp(2rem, 5vw, 4.5rem); /* fluid size between 2rem and 4.5rem based on viewport width */
+        color: white; /* white text for contrast */
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* subtle shadow for readability on image */
+        margin: 0;
+    }
+
+    h2 {
+        font-size: clamp(1.2rem, 2.5vw, 1.75rem); 
+        color: white;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Make images responsive */
+    img {
+        width: 100%; /* image fills container width */
+        object-fit: cover;    /* crop to fill without stretching */
+    }
+
+    /* Hero section (top banner with image) */
+    .hero {
+        min-height: 70vh; /* takes at least 70% of viewport height */
+        background: url("imgs/whitemountain.jpg") no-repeat center; /* background image centered */
+        background-size: cover; /* image covers entire area */
+    }
+
+    /* Intro paragraph */
+    .intro {
+        max-width: 800px; /* limit width for readability */
+        margin: 3rem auto; /* vertical spacing + center horizontally */
+        padding: 0 1.5rem; /*top+bottom|left+right */
+        font-size: clamp(1rem, 1.2vw, 1.25rem); /* fluid font size */
+        text-align: justify; /* text aligned neatly */
+    }
+
+    /* Container for cards */
+    .box {
+        display: flex; /* use flexbox layout */
+        flex-wrap: wrap; /* allow cards to wrap on smaller screens */
+        max-width: 1100px; /* prevent cards from stretching too wide */
+        margin: auto; /* horizontal centering */
+    }
+
+    /* Individual cards */
+    .card {
+        flex: 1 1 450px; 
+        background: #f7f7f7; /* light gray background */
+        padding: 1.5rem; /* inner spacing */
+        margin: 0.5rem; /* space between cards */
+        border-radius: 10px; /* rounded corners */
+        text-align: left; /* left-align text inside card */
+    }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="more.html">Explore More</a>
+    </nav>
+
+    <!-- Hero section with heading/subheading -->
+    <div class="hero">
+        <h1>White Mountains <br> New Hampshire</h1>
+        <h2>Journey Through the White Mountains</h2>
+    </div>
+
+    <!-- Intro paragraph -->
+    <p class="intro">
+        White Mountains region is one of the most breathtaking attractions located in New Hampshire. It is home to a large number of hiking trails and ski areas with spectacular scenery!
+    </p>
+
+    <!-- Card container -->
+    <div class="box">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="imgs/resort.jpg" alt="Resort">
+            <h3>Where to Stay</h3>
+            <p>
+                The White Mountains of New Hampshire has a wealth of accommodations to suit every need and taste. Everything from Grand Resorts to quiet campgrounds in the midst of our beautiful natural beauty.
+            </p>
+            <ul>
+                <li><a href="#">Lodging</a></li>
+                <li><a href="#">Camping</a></li>
+                <li><a href="#">Real Estate</a></li>
+            </ul>
+        </div>
+        <!-- End of Card 1 -->
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="imgs/mountain.jpg" alt="Mountain">
+            <h3>Hiking Tips</h3>
+            <p>
+                One of most important things when it comes to hiking in the great outdoors is packing accordingly. Here are a few tips:
+            </p>
+            <ol>
+                <li>Bring layers of clothing</li>
+                <li>Pack sunscreen and bug spray</li>
+                <li>Carry extra water just in case</li>
+                <li>Pack light</li>
+            </ol>
+        </div>
+        <!-- End of Card 2 -->
+
+    </div>
+    <!-- End of card container -->
+</body>
+
+</html>
